@@ -56,15 +56,8 @@ body{
     background-image: url('images/illustration-woman-online-desktop.svg'), url('images/bg-pattern-desktop.svg');
     background-size: 40em auto, 60em auto, cover;
     background-repeat: no-repeat;
-
-    /* background-position-x: -7em, -27em;
-    background-position-y: 4em, -10em; */
-
-    /* background-position-x: -7em, -27em;
-    background-position-y: 4vh, -10vh; */
-
     background-position-x: -7em, -27em;
-    background-position-y: 50%, -100%;
+    background-position-y: 50%, 70%;
 
     display: grid;
     justify-content: center;
