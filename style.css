@@ -54,18 +54,25 @@ body{
 
 #card-images{
     background-image: url('images/illustration-woman-online-desktop.svg'), url('images/bg-pattern-desktop.svg');
-    background-size: 40em auto, 60em auto, cover;
+    background-size: 40em auto, 60em auto;
     background-repeat: no-repeat;
     background-position-x: -7em, -27em;
     background-position-y: 50%, 70%;
-
     display: grid;
-    justify-content: center;
+    justify-content: start;
     align-content: center;
 }
 
-#card-images img{
+#card-images img#img-main, #card-images img#img-shadow{
     display: none;
+}
+
+#card-images img#box{
+    height: 15em;
+    width: auto;
+    float: left;
+    margin-left: -10em;
+    margin-top: 9em;
 }
 
 #card-text{
@@ -142,17 +149,25 @@ hr{
     #card-wrapper{
         grid-template-columns: 1fr;
         gap: 0;
+        background: none;
     }
 
     #card-images{
+        justify-content: center;
+        align-content: center;
+
         background-image: none;
         margin: 0 auto;
         width: 85%;
         height: auto;
         margin-top: -10em;
     }
+    
+    #card-images img#box{
+        display: none;
+    }
 
-    #card-images img{
+    #card-images img#img-main, #card-images img#img-shadow{
         display: block;
         min-width: 20em;
         height: auto;
