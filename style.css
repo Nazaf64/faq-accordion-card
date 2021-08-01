@@ -44,7 +44,7 @@ body{
     display: grid;
 }
 
-#container{
+main{
     width: 70%;
     -ms-grid-column-align: center;
         justify-self: center;
@@ -166,7 +166,7 @@ hr{
 
 
 @media screen and (max-width:850px){
-    #container{
+    main{
         margin-top: 12em;
         margin-bottom: 12em;
         width: 90%;
