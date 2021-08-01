@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 10 version
+*/
+
 :root{
     --border-radius: 20px;
 
@@ -25,19 +32,25 @@
 }
 
 html{
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--soft-violet)), to(var(--soft-blue)));
+    background: -o-linear-gradient(top, var(--soft-violet) 0%, var(--soft-blue) 100%);
     background: linear-gradient(180deg, var(--soft-violet) 0%, var(--soft-blue) 100%); 
 }
 
 body{
     font-size: 12px;
     min-height: 100vh;
+    display: -ms-grid;
     display: grid;
 }
 
 #container{
     width: 70%;
-    justify-self: center;
-    align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     box-shadow: 0px 11px 16px 0px rgba(0,0,0,0.31);
     -webkit-box-shadow: 0px 11px 16px 0px rgba(0,0,0,0.31);
     -moz-box-shadow: 0px 11px 16px 0px rgba(0,0,0,0.31);
@@ -46,7 +59,9 @@ body{
 }
 
 #card-wrapper{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 3em 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 3em;
 }
@@ -58,9 +73,13 @@ body{
     background-repeat: no-repeat;
     background-position-x: -7em, -27em;
     background-position-y: 50%, 70%;
+    display: -ms-grid;
     display: grid;
-    justify-content: start;
-    align-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -ms-flex-line-pack: center;
+        align-content: center;
 }
 
 #card-images img#img-main, #card-images img#img-shadow{
@@ -86,13 +105,20 @@ body{
 }
 
 .faq, .faq-active{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-content: center;
-    justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .arrow-box{
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 
 .faq p{
@@ -147,14 +173,18 @@ hr{
     }
 
     #card-wrapper{
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         gap: 0;
         background: none;
     }
 
     #card-images{
-        justify-content: center;
-        align-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
 
         background-image: none;
         margin: 0 auto;
@@ -178,7 +208,8 @@ hr{
         margin-left: -2em;
         width: 28em;
         height: auto;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         
     }
 
